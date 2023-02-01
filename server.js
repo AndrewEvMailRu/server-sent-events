@@ -13,7 +13,7 @@ const subscribe = (req, res) => {
     "Last-Modified": new Date(),
     "Access-Control-Allow-Origin": "*",
   });
-
+  res.flushHeaders();
   res.write("data: Привет\n\n");
 
   subscribers.set(req, res);
