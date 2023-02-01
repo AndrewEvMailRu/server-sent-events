@@ -10,15 +10,17 @@
     <p>The messages received from server</p>
     <ul id="list"></ul>
     <script>
-      const list = document.querySelector('#list');
+      const list = document.querySelector("#list");
 
-      const events = new EventSource('/messages');
+      const events = new EventSource(
+        "https://lazy-puce-cod-belt.cyclic.app/messages"
+      );
 
-      events.onmessage = event => {
+      events.onmessage = (event) => {
         if (!event.data) return;
 
         const message = event.data;
-        const li = document.createElement('li');
+        const li = document.createElement("li");
         li.textContent = message;
         list.appendChild(li);
       };

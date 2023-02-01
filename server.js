@@ -11,6 +11,7 @@ const subscribe = (req, res) => {
     "Retry-After": 120,
     "X-Accel-Buffering": "no",
     "Last-Modified": new Date(),
+    "Access-Control-Allow-Origin": "*",
   });
 
   res.write("data: Привет\n\n");
