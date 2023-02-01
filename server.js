@@ -10,6 +10,7 @@ const subscribe = (req, res) => {
     "Cache-Control": "no-cache",
     "Retry-After": 120,
     "X-Accel-Buffering": "no",
+    "Last-Modified": new Date(),
   });
 
   res.write("data: Привет\n\n");
