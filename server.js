@@ -7,7 +7,6 @@ const subscribe = (req, res) => {
   res.header({
     "Content-Type": "text/event-stream",
     "Transfer-Encoding": "chunked",
-    Connection: "keep-alive",
     "Cache-Control": "no-cache",
     "Retry-After": 120,
     "X-Accel-Buffering": "no",
